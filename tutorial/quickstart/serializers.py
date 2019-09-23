@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User, Group
+# from models import Post
 from rest_framework import serializers
 
 
@@ -12,3 +13,10 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
         fields = ['url', 'name']
+
+
+class PostSerializer(serializers.HyperlinkedModelSerializer):
+    pass
+    # class Meta:
+    #     model = Post
+    #     fields = ['url', 'content', 'user_id', 'pub_date']
